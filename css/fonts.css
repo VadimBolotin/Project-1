@@ -1,0 +1,49 @@
+/* font-family: 'Josefin Sans', sans-serif; 
+font-weight:*/
+
+/* ProximaNova */
+@font-face {
+  font-family: 'ProximaNova ', sans-serif;
+  src:  url('../fonts/ProximaNovaRegular.woff2') format('woff2'),
+        url('../fonts/ProximaNovaRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ProximaNova ', sans-serif;
+  src:  url('../fonts/ProximaNovaBold.woff2') format('woff2'),
+        url('../fonts/ProximaNovaBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CircularStd */
+@font-face {
+  font-family: 'CircularStd ', sans-serif;
+  src:  url('../fonts/CircularStd-Book.woff2') format('woff2'),
+        url('../fonts/CircularStd-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CircularStd ', sans-serif;
+  src:  url('../fonts/CircularStd-Medium.woff2') format('woff2'),
+        url('../fonts/CircularStd-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CircularStd ', sans-serif;
+  src:  url('../fonts/CircularStd-Bold.woff2') format('woff2'),
+        url('../fonts/CircularStd-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
