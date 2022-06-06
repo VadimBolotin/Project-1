@@ -17,4 +17,9 @@ $(function(){
     infinite:false,
 
   });
+
 });
+
+$(window).on('load', function(){
+  $('.preloader').addClass('preloader-remove')
+})
