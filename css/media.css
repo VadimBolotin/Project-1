@@ -1,6 +1,4 @@
-@media (max-width: 1440px){
-  
-}
+
 
 @media (max-width: 1173px){
   body{
@@ -104,7 +102,6 @@
     margin-right: 66px;
   }
 }
-
 @media (max-width: 900px){
   .staff{
     margin-bottom: 131px;
@@ -152,7 +149,6 @@
     line-height: 25px;
   }
 }
-
 @media (max-width: 850px){
   body{
     background-size: 700px;
@@ -255,7 +251,6 @@
     line-height: 21px;
   }
 }
-
 @media (max-width: 750px){
   .services-box{
     flex-direction: column;
@@ -341,7 +336,6 @@
     left: 20px;
   }
 }
-
 @media (max-width: 660px){
   .menu{
     z-index: 2;
@@ -693,4 +687,14 @@
   .menu__list{
     bottom: 340px;
   }
+}
+
+
+
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: black;
+    color: white;
+      }
 }

@@ -14,23 +14,21 @@
 
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/slick.css">
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="./css/styles.css">
+
 
   <link rel="stylesheet" href="./css/media.css">
 </head>
-<body>
-<div class="body__inner">
-  
-  <div class="preloader">
-    <div class="preloader-1"></div>
-  </div>
+<body id="main">
   
 
-  <header class="header none">
+  <header class="header">
     <div class="container">
       <div class="header__inner">
 
-        <div>
+        <div class="logo-top element-animation" >
           <a href="#" class="logo">
             <picture class="logo__img">
               <img src="./images/logo.svg" alt="logo">
@@ -38,7 +36,7 @@
           </a>
         </div>
 
-        <nav class="menu">
+        <nav class="menu element-animation">
           <ul class="menu__list">
             <li class="menu__list-item">
               <a href="#" class="menu__list-link">
@@ -72,11 +70,22 @@
     </div>
   </header>
 
+  <!-- <div class="container">
+    <div id="theme" class="toggle">
+
+    </div>
+  </div> -->
+
+  
+  <!-- <button id="switchMode">Switch</button> -->
+
+
+
   <section class="top none">
     <div class="container">
       <div class="top__inner">
 
-        <div class="top__content">
+        <div class="top__content element-animation">
           <h3 class="top__content-suptitle">
             Creative Agency
           </h3>
@@ -94,8 +103,8 @@
           </a>
         </div>
 
-        <div class="top__images">
-          <img src="./images/header-bg.png" alt="человек с корзиной">
+        <div class="top__images element-animation">
+          <img  src="./images/header-bg.png" alt="человек с корзиной">
         </div>
       </div>
     </div>
@@ -104,17 +113,17 @@
   <section class="services none">
     <div class="container">
       <div class="services-subdescr">
-        <h3 class="services-subdescr__text">
+        <h3 class="services-subdescr__text element-animation">
           Our Services
         </h3>
-        <h2 class="services-subdescr__title">
+        <h2 class="services-subdescr__title element-animation">
           Why People Choose Us
         </h2>
       </div>
       <div class="services-inner">
         <div class="services-box">
 
-          <div class="services-box__item">
+          <div class="services-box__item element-animation">
             <div class="services-box__item-img">
               
               <svg class="svg-path"  width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,7 +158,7 @@
 
           </div>
 
-          <div class="services-box__item">
+          <div class="services-box__item element-animation">
             <div class="services-box__item-img">
               
               <svg   width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +190,7 @@
 
           </div>
 
-          <div class="services-box__item">
+          <div class="services-box__item element-animation">
             <div class="services-box__item-img">
               
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -216,7 +225,7 @@
 
           </div>
 
-          <div class="services-box__item">
+          <div class="services-box__item element-animation">
             <div class="services-box__item-img">
               
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -435,6 +444,9 @@
     </div>
   </section>
 
+  
+
+
   <footer class="footer">
     <div class="container">
 
@@ -443,7 +455,6 @@
         <div class="footer__contacts">
 
           <div class="footer__contacts-logo">
-            <!-- <img src="./images/logo.svg" alt=""> -->
             <img src="./images/logo-footer.svg" alt="">
           </div>
 
@@ -573,10 +584,30 @@
     </div>
   </footer>
 
-</div>
+  <section>
+    <div class="notification">
+
+      <div class="left_noth_prem">
+        <div class="tit">Подпишись на социальные сети!</div>
+        <div class="descr">Все самое лучшее там!</div>
+        <div class="btns">
+          <a href="#" target="_blank" class="youtube_bg">Вконтакте</a>
+          <a href="#" target="_blank" class="inst_bg">Instagram</a>
+        </div>
+      </div>
+  
+      <div class="right_noth_prem">
+        <img src="./img/social_icons.svg" alt="">
+      </div>
+  
+    </div
+  </section>
+
+  
 
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>

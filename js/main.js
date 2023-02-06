@@ -18,8 +18,56 @@ $(function(){
 
   });
 
+  // $('.toggle').on('click', function(event){
+  //   $(this).toggleClass('active');
+  //   $('body').toggleClass('night');
+  // });
 });
 
-$(window).on('load', function(){
-  $('.preloader').addClass('preloader-remove')
-})
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('element-show');
+    } else {
+      change.target.classList.remove('element-show');
+    }
+  });
+}
+
+let options = {
+  threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
+
+// let switchMode = document.getElementById("switchMode");
+// switchMode.onclick = function(){
+//   let theme = document.getElementById("theme");
+
+//   if(theme.getAttribute("href") === "styles.css"){
+//     theme.href = "dark-mode.css";
+//   } else {
+//     theme.href = "styles.css";
+//   }
+// }
+
+
+// push
+
+const notifElem = document.querySelector('.notification');
+const notif = {
+  open: (color = 'pink') => notifElem.classList.add('go', color),
+  close: () => notifElem.classList.remove('go')
+}
+
+setTimeout(() => {
+  notif.open('pink')
+  setTimeout(() => {
+    notif.close();
+  }, 15000)
+}, 5000);
+
