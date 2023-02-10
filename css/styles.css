@@ -6,6 +6,16 @@ html{
 *::after{
   box-sizing: inherit;
 }
+/* gsap will-change*/
+.content, 
+.top__content, 
+.top__images, 
+.services,
+.page-section,
+.staff,
+.partners{
+  will-change: transform;
+}
 body{
   margin: 0;
   padding: 0;
@@ -14,19 +24,19 @@ body{
   font-weight: 400;
   color: #919299;
   /* background: #E5E5E5; */
+  overflow-x: hidden;
+}
+.bodyBg{
   background: #FCFCFC;
   background-image: url(../images/header-bg-line.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 936px;
-  overflow-x: hidden;
 }
 /* body.night{
   background: #00151f;
   transition: .4s;
 }
-
-
 .theme-dark{
   background: black;
   color: white;
@@ -990,6 +1000,10 @@ background-position: right bottom;
 .services-box__item.element-animation:nth-of-type(4).element-show{
   transition-delay: 1.6s;
 }
+
+
+
+
 
 
 

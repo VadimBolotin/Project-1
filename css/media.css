@@ -1,7 +1,7 @@
 
 
 @media (max-width: 1173px){
-  body{
+  .bodyBg{
     background-size: contain;
   }
   .top__content{
@@ -150,7 +150,7 @@
   }
 }
 @media (max-width: 850px){
-  body{
+  .bodyBg{
     background-size: 700px;
   }
   .top__content-suptitle{
@@ -259,6 +259,7 @@
   }
   .services-inner{
     margin-bottom: 20px;
+
   }
   .services-box__item{
     width: 70%;
