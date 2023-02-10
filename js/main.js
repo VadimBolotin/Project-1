@@ -1,3 +1,5 @@
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
 $(function(){
 
   $('.menu__btn').on('click', function(){
@@ -25,24 +27,26 @@ $(function(){
 });
 
 
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-     change.target.classList.add('element-show');
-    } else {
-      change.target.classList.remove('element-show');
-    }
-  });
-}
+// function onEntry(entry) {
+//   entry.forEach(change => {
+//     if (change.isIntersecting) {
+//      change.target.classList.add('element-show');
+//     } else {
+//       change.target.classList.remove('element-show');
+//     }
+//   });
+// }
 
-let options = {
-  threshold: [0.5] };
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.element-animation');
+// let options = {
+//   threshold: [0.5] };
+// let observer = new IntersectionObserver(onEntry, options);
+// let elements = document.querySelectorAll('.element-animation');
 
-for (let elm of elements) {
-  observer.observe(elm);
-}
+// for (let elm of elements) {
+//   observer.observe(elm);
+// }
+
+
 
 // let switchMode = document.getElementById("switchMode");
 // switchMode.onclick = function(){
@@ -70,4 +74,262 @@ setTimeout(() => {
     notif.close();
   }, 15000)
 }, 5000);
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+
+ScrollTrigger.matchMedia({
+
+  "(min-width:799px)": function() {
+    if(ScrollTrigger.isTouch !== 1 ){
+
+      ScrollSmoother.create({
+        wrapper: '.wrapper',
+        content: '.content',
+        smooth: 1.5,
+        effects: true,
+      })
+    
+      gsap.fromTo('.top', {opacity: 1}, {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: '.top',
+          start: 'center',
+          end: '820',
+          scrub: true,
+        }
+      })
+      gsap.fromTo('.services-subdescr', {opacity: 0}, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: '.services-subdescr',
+          start: '-800',
+          end: '-100',
+          scrub: true,
+        }
+      })
+      let itemsServices = gsap.utils.toArray('.services-box .services-box__item');
+      itemsServices.forEach(item => {
+        gsap.fromTo(item, {y: -50,opacity: 0},{
+          opacity: 1, 
+          y: 0,
+          scrollTrigger: {
+            trigger: item,
+            start: '-800',
+            end: 'bottom',
+            scrub: true,
+          }
+        })
+      })
+    
+      gsap.fromTo('.rigth-content', {opacity: 0.5, x: 1000}, {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: '.rigth-content',
+          start: '-900',
+          end: '100',
+          scrub: true,
+        }
+      })
+      gsap.fromTo('.left-content', {opacity: 0.5, x: -1000}, {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: '.left-content',
+          start: '-900',
+          end: '100',
+          scrub: true,
+        }
+      })
+      gsap.fromTo('.left__img', {opacity: 0.5, x: -1000}, {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: '.left__img',
+          start: '-800',
+          end: '100',
+          scrub: true,
+        }
+      })
+      gsap.fromTo('.rigth__img', {opacity: 0.5, x: 1000}, {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: '.rigth__img',
+          start: '-800',
+          end: '100',
+          scrub: true,
+        }
+      })
+      gsap.fromTo('.staff', {opacity: 0, x: 1000}, {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: '.staff',
+          start: '-900',
+          end: 'bottom',
+          scrub: true,
+        }
+      })
+      let partnersImg = gsap.utils.toArray('.partners__inner .partners__inner-img')
+      partnersImg.forEach(item => {
+        gsap.fromTo(item, {x: -1000,opacity: 0},{
+          opacity: 1, 
+          x: 0,
+          scrollTrigger: {
+            trigger: item,
+            start: '-900',
+            end: '-100',
+            scrub: true
+          }
+        })
+      })
+      gsap.fromTo('.blog', {opacity: 0}, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: '.blog',
+          start: '-500',
+          end: 'bottom',
+          scrub: true,
+        }
+      })
+      gsap.fromTo('.footer', {opacity: 0.9}, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: '.footer',
+          start: '-900',
+          end: 'bottom',
+          scrub: true,
+        }
+      })
+    
+    }
+  }
+
+})
+
+// if(ScrollTrigger.isTouch !== 1 ){
+
+//   ScrollSmoother.create({
+//     wrapper: '.wrapper',
+//     content: '.content',
+//     smooth: 1.5,
+//     effects: true,
+//   })
+
+//   gsap.fromTo('.top', {opacity: 1}, {
+//     opacity: 0,
+//     scrollTrigger: {
+//       trigger: '.top',
+//       start: 'center',
+//       end: '820',
+//       scrub: true,
+//     }
+//   })
+//   gsap.fromTo('.services-subdescr', {opacity: 0}, {
+//     opacity: 1,
+//     scrollTrigger: {
+//       trigger: '.services-subdescr',
+//       start: '-800',
+//       end: '-100',
+//       scrub: true,
+//     }
+//   })
+//   let itemsServices = gsap.utils.toArray('.services-box .services-box__item');
+//   itemsServices.forEach(item => {
+//     gsap.fromTo(item, {y: -50,opacity: 0},{
+//       opacity: 1, 
+//       y: 0,
+//       scrollTrigger: {
+//         trigger: item,
+//         start: '-800',
+//         end: 'bottom',
+//         scrub: true,
+//       }
+//     })
+//   })
+
+//   gsap.fromTo('.rigth-content', {opacity: 0.5, x: 1000}, {
+//     opacity: 1,
+//     x: 0,
+//     scrollTrigger: {
+//       trigger: '.rigth-content',
+//       start: '-900',
+//       end: '100',
+//       scrub: true,
+//     }
+//   })
+//   gsap.fromTo('.left-content', {opacity: 0.5, x: -1000}, {
+//     opacity: 1,
+//     x: 0,
+//     scrollTrigger: {
+//       trigger: '.left-content',
+//       start: '-900',
+//       end: '100',
+//       scrub: true,
+//     }
+//   })
+//   gsap.fromTo('.left__img', {opacity: 0.5, x: -1000}, {
+//     opacity: 1,
+//     x: 0,
+//     scrollTrigger: {
+//       trigger: '.left__img',
+//       start: '-800',
+//       end: '100',
+//       scrub: true,
+//     }
+//   })
+//   gsap.fromTo('.rigth__img', {opacity: 0.5, x: 1000}, {
+//     opacity: 1,
+//     x: 0,
+//     scrollTrigger: {
+//       trigger: '.rigth__img',
+//       start: '-800',
+//       end: '100',
+//       scrub: true,
+//     }
+//   })
+//   gsap.fromTo('.staff', {opacity: 0, x: 1000}, {
+//     opacity: 1,
+//     x: 0,
+//     scrollTrigger: {
+//       trigger: '.staff',
+//       start: '-900',
+//       end: 'bottom',
+//       scrub: true,
+//     }
+//   })
+//   let partnersImg = gsap.utils.toArray('.partners__inner .partners__inner-img')
+//   partnersImg.forEach(item => {
+//     gsap.fromTo(item, {x: -1000,opacity: 0},{
+//       opacity: 1, 
+//       x: 0,
+//       scrollTrigger: {
+//         trigger: item,
+//         start: '-900',
+//         end: '-100',
+//         scrub: true
+//       }
+//     })
+//   })
+//   gsap.fromTo('.blog', {opacity: 0}, {
+//     opacity: 1,
+//     scrollTrigger: {
+//       trigger: '.blog',
+//       start: '-500',
+//       end: 'bottom',
+//       scrub: true,
+//     }
+//   })
+//   gsap.fromTo('.footer', {opacity: 0.9}, {
+//     opacity: 1,
+//     scrollTrigger: {
+//       trigger: '.footer',
+//       start: '-900',
+//       end: 'bottom',
+//       scrub: true,
+//     }
+//   })
+
+// }
 
